@@ -1,15 +1,13 @@
 import { Router } from "express";
-//import { TaskController } from "./task.controller";
 import { asyncHandler } from "../../shared/middlewares/asyncHandler";
-import { CategoryController } from "./categories.controller";
+import { GenreController } from "../genres/genre.controller";
 
 const router = Router();
-const categoryController = new CategoryController();
+const genreController = new GenreController();
 
-router.post("/", asyncHandler(categoryController.create));
-router.get("/", asyncHandler(categoryController.findAll));
-router.get("/:id", asyncHandler(categoryController.findById));
-router.put("/:id", asyncHandler(categoryController.update));
-router.delete("/:id", asyncHandler(categoryController.delete));
+router.post("/", asyncHandler(genreController.create));
+router.get("/", asyncHandler(genreController.findAll));
+router.get("/:id", asyncHandler(genreController.findById));
+router.delete("/:id", asyncHandler(genreController.delete));
 
 export default router;

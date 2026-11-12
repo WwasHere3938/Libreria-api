@@ -1,7 +1,7 @@
 import { Router } from "express";
 //import { TaskController } from "./task.controller";
 import { asyncHandler } from "../../shared/middlewares/asyncHandler";
-import { CategoryController } from "./categories.controller";
+import { CategoryController } from "../categories/categories.controller";
 
 const router = Router();
 const categoryController = new CategoryController();
